@@ -1,3 +1,21 @@
 #profile-img{
 	border-radius: 300px;
 }
+#about .row{
+	color: #333;
+}
+#about{
+	background: rgb(255,255,255);
+}
+#contact{
+	background: #18BC9C;
+}
+#contact .row{
+	color: #FFF;
+}
+#contact .control-group{
+	color: #FFF;
+}
+header .container{
+	padding-top: 100px;
+}
