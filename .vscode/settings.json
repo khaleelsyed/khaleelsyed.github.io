@@ -1,0 +1,10 @@
+{
+    "eslint.enable": true,
+    "eslint.debug": true,
+    "eslint.format.enable": true,
+    "eslint.ignoreUntitled": true,
+    "eslint.onIgnoredFiles": "warn",
+    "debug.javascript.codelens.npmScripts": "top",
+    "npm.packageManager": "pnpm",
+    "prisma.scriptRunner": "pnpm"
+}
