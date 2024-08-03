@@ -1,5 +1,5 @@
 ---
-title: "You've been using sets wrong this whole time - Python"
+title: "You've been using Set wrong this whole time!"
 description: "Teaching Python how to differentiate between objects"
 date: "Aug 03 2024"
 ---
