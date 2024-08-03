@@ -28,20 +28,16 @@ export const PROJECTS: Metadata = {
 };
 
 export const SOCIALS: Socials = [
-  { 
+  {
     NAME: "X",
     HREF: "https://twitter.com/khaleel__syed",
   },
-  { 
+  {
     NAME: "Github",
     HREF: "https://github.com/khaleelsyed"
   },
-  { 
+  {
     NAME: "Linkedin",
     HREF: "https://www.linkedin.com/in/khaleelsyed",
   }
 ];
-
-export const SKILLS: string = [
-  "Docker"
-]

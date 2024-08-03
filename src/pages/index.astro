@@ -12,10 +12,10 @@ const blog = (await getCollection("blog"))
   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
   .slice(0, SITE.NUM_POSTS_ON_HOMEPAGE);
 
-const projects = (await getCollection("projects"))
-  .filter((project) => !project.data.draft)
-  .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
-  .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
+// const projects = (await getCollection("projects"))
+//   .filter((project) => !project.data.draft)
+//   .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf())
+//   .slice(0, SITE.NUM_PROJECTS_ON_HOMEPAGE);
 
 const allwork = (await getCollection("work"))
   .sort(
@@ -54,13 +54,13 @@ const work = await Promise.all(
             >Skills</h7
           >
           <ul class="animate">
-            <li>Docker</li>
-            <li>Python</li>
-            <li>Go</li>
-            <li>Backend Development</li>
-            <li>Git</li>
-            <li>Linux</li>
-            <li>Prisma ORM</li>
+            <ul>Docker</ul>
+            <ul>Python</ul>
+            <ul>Go</ul>
+            <ul>Backend</ul>
+            <ul>Git</ul>
+            <ul>Linux</ul>
+            <ul>Prisma ORM</ul>
           </ul>
         </article>
       </section>
