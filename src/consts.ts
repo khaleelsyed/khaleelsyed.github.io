@@ -39,5 +39,9 @@ export const SOCIALS: Socials = [
   {
     NAME: "Linkedin",
     HREF: "https://www.linkedin.com/in/khaleelsyed",
-  }
+  },
+  {
+    NAME: "Hashnode",
+    HREF: "https://blog.khaleel.dev",
+  },
 ];
