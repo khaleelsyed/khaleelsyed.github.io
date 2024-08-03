@@ -1,14 +1,12 @@
 ---
 title: "You've been using sets wrong this whole time - Python"
 description: "Teaching Python how to differentiate between objects"
-date: "July 23 2024"
-draft: true
+date: "Aug 03 2024"
 ---
-
 Imagine you've built this cool bit of logic that relies on using a Set of objects. You've written the class yourself, and now you're passing objects into a set like so.
 
 ```python
-class DumbClass:
+class CleverClass:
     def __init__(self, name: str, data: dict[str, bool]) -> None:
         self.name = name
         self.data = data
@@ -40,7 +38,7 @@ Now we all know about the python Set - every element in there is unique. Because
 
 `hash()` is a built-in Python method that is used to calculate the integer hash value of an object. This means that generally the hash value of each object will be unique - the hash values can be controlled by adding a  `__hash__()` method to a class.
 
-As python's `hash()` function expects integer values, our `__hash__()` method must also return an `int`. We can concatenate the name and data attributes as strings and then calculate the hash value in one go (to prevent the )
+As python's `hash()` function expects integer values, our `__hash__()` method must also return an `int`. We can concatenate the name and data attributes as strings and then calculate the hash value in one go (rather than adding the hashes separately to avoid colliding hashes).
 
 ```python
 class CleverClass:
@@ -118,3 +116,7 @@ Now when objects with the same attributes are inserted into the set, they will n
 >>> len(clever_object_set)
 2
 ```
+
+## Things to note
+
+The hash value is only as reliable as the hashing function. Python's hash method always returns an `int`, which is why all `__hash__()` methods must also return an `int`. This may lead to collisions occurring more frequently, in contrast to other popular hash algorithms that use hexadecimal characters.
