@@ -6,6 +6,6 @@ dateEnd: "Current"
 ---
 
 
-In my role at ADSP, I have designed, constructed, tested, and maintained scalable data architectures, collaborating closely with senior engineers, data scientists, and data engineering teams. My work included identifying data acquisition opportunities, developing and integrating APIs, and creating internal tools to enhance workflow efficiency and support business requirements. Working in Python, I have leveraged technologies such as Django, FastAPI, and Prisma to develop robust data solutions.
+At ADSP, I have been instrumental in designing, building, testing, and maintaining scalable data architectures. In collaboration with senior engineers, data scientists, and cross-functional teams, I have spearheaded efforts to identify data acquisition opportunities and developed integrated APIs and internal tools to streamline workflow efficiency. My work, primarily with Python, has leveraged frameworks such as Django, FastAPI, and Prisma to craft robust data solutions.
 
-Additionally, I have automated data workflows to ensure optimized performance and reliability. I have also implemented strategies to improve data quality and efficiency, thereby contributing to the successful delivery of high-quality data science solutions that drive business excellence.
+Additionally, I have automated data workflows to ensure optimal performance and reliability, implementing strategies that have greatly enhanced data quality and operational efficiency. My contributions have been key to delivering high-quality data science solutions that drive business excellence and foster innovation.

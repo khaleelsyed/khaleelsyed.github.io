@@ -42,6 +42,6 @@ export const SOCIALS: Socials = [
   },
   {
     NAME: "Hashnode",
-    HREF: "https://blog.khaleel.dev",
+    HREF: "https://hashnode.khaleel.dev",
   },
 ];
