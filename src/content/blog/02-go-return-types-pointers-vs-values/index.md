@@ -36,7 +36,7 @@ func main(){
 
 In the following example, the `Point` value is being returned from `NewPoint()`. The `Point` object will remain on the main goroutine's [stack](https://slipbox.khaleel.dev/slipbox/2502142225#stack). 
 
-It is recommended that a value for small or immutable types be returned.
+It's better to return a value for small or immutable types be returned as they're fast to copy into a stack.
 
 ### Pointer Return
 
@@ -55,7 +55,7 @@ func main(has
 
 Returning a pointer means the object will escape to the [heap](https://slipbox.khaleel.dev/slipbox/2502142225#heap) rather than remain on the stack.
 
-Generally, it's recommended to return pointers when:
+Long story short, return pointers when:
 - Using large structs
 - Modifying (mutable) objects
 - Using structs from other packages
@@ -111,7 +111,7 @@ func (p *Point) ValidatePoint() error{
 
 In a pointer receiver, the object is escaped to the heap.
 
-Generally, it's recommended to use pointer receivers when the receiving type is significant, is not safe to copy, or if you want to modify the receiver. If a method is concurrent, use a pointer receiver - to avoid introducing [race conditions](https://slipbox.khaleel.dev/slipbox/2508130030).
+Use pointer receivers when the receiving type is significantly large, is not safe to copy, or if you want to modify the receiver - as it's faster than copying it. If a method is concurrent, use a pointer receiver - to avoid introducing [race conditions](https://slipbox.khaleel.dev/slipbox/2508130030).
 
 As mentioned, [mutexes](https://slipbox.khaleel.dev/slipbox/2508172148) are not safe to copy. If you have a mutex or another field that is not safe to copy, you must use pointer receivers.
 ## How Escape Analysis changes based on Value or Pointer Receivers
@@ -131,7 +131,6 @@ When deciding between using pointer and value returns or receivers, it's importa
 | All the fields in the type are safe to copy | If the type has fields that aren't safe to copy (for example, `sync.Mutex`) |
 |                                             | Concurrent methods                                                          |
 |                                             | Use when copying the fields of a `struct` can cause aliasing issues         |
-
 
 ## FAQ
 
